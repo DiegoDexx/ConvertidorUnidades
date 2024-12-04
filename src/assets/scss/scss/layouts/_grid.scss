@@ -9,6 +9,10 @@
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
     gap: 2.5rem;
+
+    @include mobile(){
+      gap: 1rem;
+    }
   
     @include respond(mobile) {
         grid-template-columns: repeat($grid-base3-columns, 1fr); // 6 columnas en móviles
