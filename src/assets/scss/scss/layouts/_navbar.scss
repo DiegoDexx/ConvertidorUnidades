@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300');
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid $tertiary-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    &__content{
+        padding: 0;
+        margin: 0 auto;
+        width: $content-with;
+        // border : 1px solid $secondary-color;
+
+            .logo{
+                @include flex-container(row, flex-start, flex-start);
+                gap: 15px;
+                align-items: center;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                h2{
+                    font-size: 1.6rem;
+                    color: $secondary-color;
+                    font-weight:900;
+                }
+            }
+    }
+}
+
+
+

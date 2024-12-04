@@ -1,0 +1,63 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+// Grid.scss
+// --------------------------------------------------
+//En este sass se implementa una configuración grid a partir de cols y rows que sea parecida a la de bootstrap o tailwind para facilitar la creación de páginas  responsives.
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    gap: 2.5rem;
+  
+    @include respond(mobile) {
+        grid-template-columns: repeat($grid-base3-columns, 1fr); // 6 columnas en móviles
+      }
+    
+      @include respond(tablet) {
+        grid-template-columns: repeat(8, 1fr); // 8 columnas en tablets
+      }
+    
+      @include respond(desktop) {
+        grid-template-columns: repeat($grid-columns, 1fr); // 12 columnas (portátiles o monitores)
+      }
+
+      @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+          grid-column: span $i; 
+        }
+      }
+
+// Clases responsivas para columnas
+
+@for $i from 1 through $grid-columns {
+    // Asignaciónd e clases para portátil
+    .col-lg-#{$i} {
+      @include respond(desktop) {
+        grid-column: span $i;
+      }
+    }
+  
+    // Asifnacion para tablets
+    .col-md-#{$i} {
+      @include respond(tablet) {
+        grid-column: span $i;
+      }
+    }
+  
+    // Asignación para móvil
+    .col-sm-#{$i} {
+      @include respond(mobile) {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  .row {
+    display: grid;
+
+  }
+  
+   
+  }
+  

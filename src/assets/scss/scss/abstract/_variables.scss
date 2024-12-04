@@ -1,0 +1,27 @@
+
+$primary-color: rgb(7, 6, 6);
+$secondary-color: #2e0039;    
+$tertiary-color: rgb(255, 255, 255);
+ // Púrpura oscuro
+
+$lighter: lighten($secondary-color, 30%);
+// $background-news:  linear-gradient(to right, #2e0039 , #CE5527);
+$darken:  darken($secondary-color, 25%);
+$background-darken: $secondary-color;
+$text-color: #fff;
+
+// $clip-border1: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+// $clip-border2: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+// $clip-border_responsive:  polygon(0 1%, 100% 0, 100% 100%, 0% 100%);;
+
+
+$laptop-width: 1920px;
+$mobile-width: 768px;
+$grid-columns: 12;
+$grid-base3-columns: 6;
+
+$content-with: 65%;
+$content-mobile-width: 90%;
+
+// $grid-rows: 12;
+
